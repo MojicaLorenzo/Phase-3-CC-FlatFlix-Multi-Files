@@ -24,32 +24,32 @@ class TestViewer:
         assert isinstance(viewer.username, str)
 
         # comment out the next two lines if using Exceptions
-        # viewer.username = 2
-        # assert viewer.username == "fanny_the_dog"
+        viewer.username = 2
+        assert viewer.username == "fanny_the_dog"
 
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            viewer.username = 2
+        # with pytest.raises(Exception):
+        #     viewer.username = 2
 
     def test_username_length(self):
         """usernames must be between 6 and 16 characters, inclusive"""
         viewer = Viewer("gustave_the_cat")
         
         # comment out the next two lines if using Exceptions
-        # viewer.username = "abcdefghijklmnopq"
-        # assert viewer.username == "gustave_the_cat"
+        viewer.username = "abcdefghijklmnopq"
+        assert viewer.username == "gustave_the_cat"
 
         # comment out the next two lines if using Exceptions
-        # viewer.username = "abcde"
-        # assert viewer.username == "gustave_the_cat"
+        viewer.username = "abcde"
+        assert viewer.username == "gustave_the_cat"
 
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            Viewer("abcde")
+        # with pytest.raises(Exception):
+        #     Viewer("abcde")
 
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            Viewer("abcdefghijklmnopq")
+        # with pytest.raises(Exception):
+        #     Viewer("abcdefghijklmnopq")
 
     def test_has_reviews(self):
         """viewer has a list of all reviews submitted"""

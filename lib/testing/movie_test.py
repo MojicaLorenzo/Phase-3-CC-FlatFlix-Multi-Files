@@ -21,28 +21,28 @@ class TestMovie:
         assert isinstance(movie.title, str)
         
         # comment out the next two lines if using Exceptions
-        # movie.title = 2
-        # assert movie.title == "Avatar: The Way of Ice"
+        movie.title = 2
+        assert movie.title == "Avatar: The Way of Ice"
         
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            movie.title = 2
+        # with pytest.raises(Exception):
+        #     movie.title = 2
 
     def test_title_length(self):
         '''title must be longer than 0 characters'''
         movie = Movie("Avatar: The Way of Water")
         
         # comment out the next two lines if using Exceptions
-        # movie.title = ""
-        # assert movie.title == "Avatar: The Way of Water"
+        movie.title = ""
+        assert movie.title == "Avatar: The Way of Water"
         
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            movie.title = ""
+        # with pytest.raises(Exception):
+        #     movie.title = ""
         
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            Movie("")
+        # with pytest.raises(Exception):
+        #     Movie("")
     
     def test_has_reviews(self):
         '''movie has a list of reviews'''

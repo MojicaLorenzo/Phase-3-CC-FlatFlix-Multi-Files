@@ -24,20 +24,20 @@ class TestReview:
         review_1 = Review(viewer, movie, 5)
         
         # comment out the next two lines if using Exceptions
-        # review_1.rating = 4
-        # assert review_1.rating == 5
+        review_1.rating = 4
+        assert review_1.rating == 5
 
         # comment out the next two lines if using Exceptions
-        # review_1.rating = "three"
-        # assert review_1.rating == 5
+        review_1.rating = "three"
+        assert review_1.rating == 5
         
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            review_1.rating = 4
+        # with pytest.raises(Exception):
+        #     review_1.rating = 4
         
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            Review(viewer, movie, "three")
+        # with pytest.raises(Exception):
+        #     Review(viewer, movie, "three")
         
     def test_rating_range(self):
         '''ratings must be between 1 and 5, inclusive.'''
@@ -46,20 +46,20 @@ class TestReview:
         review_1 = Review(viewer, movie, 5)
         
         # comment out the next two lines if using Exceptions
-        # review_1.rating = 6
-        # assert review_1.rating == 5
+        review_1.rating = 6
+        assert review_1.rating == 5
         
         # comment out the next two lines if using Exceptions
-        # review_1.rating = 0
-        # assert review_1.rating == 5
+        review_1.rating = 0
+        assert review_1.rating == 5
         
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            Review(viewer, movie, 6)
+        # with pytest.raises(Exception):
+        #     Review(viewer, movie, 6)
         
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            Review(viewer, movie, 0)
+        # with pytest.raises(Exception):
+        #     Review(viewer, movie, 0)
 
     def test_has_a_viewer(self):
         '''review has a viewer'''
@@ -86,12 +86,12 @@ class TestReview:
         assert review_1.viewer.username == "snag_the_snail"
 
         #comment out the next two lines if using Exceptions
-        # review_1.viewer = "Penny the Dog"
-        # assert review_1.viewer.username == "snag_the_snail"
+        review_1.viewer = "Penny the Dog"
+        assert review_1.viewer.username == "snag_the_snail"
 
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            Review("Penny the Dog", movie, 3)
+        # with pytest.raises(Exception):
+        #     Review("Penny the Dog", movie, 3)
 
     def test_has_a_movie(self):
         '''review has a movie'''
@@ -119,12 +119,12 @@ class TestReview:
         assert review_1.movie.title == "The 400 Blows"
 
         #comment out the next two lines if using Exceptions
-        # review_1.movie = "Indianan Jones"
-        # assert review_1.movie.title == "The 400 Blows"
+        review_1.movie = "Indianan Jones"
+        assert review_1.movie.title == "The 400 Blows"
 
         # uncomment the next two lines if using Exceptions
-        with pytest.raises(Exception):
-            Review(viewer_1, "Breathless", 3)
+        # with pytest.raises(Exception):
+        #     Review(viewer_1, "Breathless", 3)
 
     def test_get_all_reviews(self):
         """Review class has all attribute"""
